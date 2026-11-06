@@ -40,7 +40,7 @@
         <div class="tag-controls-panel">
           <p class="eyebrow">The finishing touch</p>
           <h2 id="tag-maker-heading">Make It Personal</h2>
-          <p class="tag-panel-intro">Fill in your greeting, pick a vintage look, and watch the tag take shape.</p>
+          <p class="tag-panel-intro">Fill in your greeting, pick a vintage look, and watch the tag take shape. Prefer to write by hand? Choose the new <strong>Handwritten Keepsake</strong> option.</p>
           <form id="gift-tag-form" novalidate>
             <div class="tag-input-grid">
               <label class="tag-field" for="tag-to">To <input id="tag-to" name="to" type="text" maxlength="28" placeholder="Someone special" autocomplete="off"></label>
@@ -64,8 +64,10 @@
                 <label class="tag-style-option"><input type="radio" name="tag-style" value="holly" checked><span><strong>Holly &amp; Ivory</strong><small>Classic Christmas</small></span></label>
                 <label class="tag-style-option"><input type="radio" name="tag-style" value="cranberry"><span><strong>Cranberry &amp; Gold</strong><small>Rich and festive</small></span></label>
                 <label class="tag-style-option"><input type="radio" name="tag-style" value="evergreen"><span><strong>Evergreen Keepsake</strong><small>Warm and rustic</small></span></label>
+                <label class="tag-style-option tag-style-option-handwritten"><input type="radio" name="tag-style" value="handwritten"><span><strong>Handwritten Keepsake</strong><small>Print &amp; fill in by hand</small></span></label>
               </div>
             </fieldset>
+            <p id="handwrite-note" class="handwrite-note" hidden>This version prints your illustrated tag as-is so you can fill in the <strong>To</strong> and <strong>From</strong> lines by hand for a more personal touch.</p>
             <label class="tag-field" for="tag-count">Tags to print
               <select id="tag-count" name="count"><option value="1">1 tag</option><option value="2">2 tags</option><option value="4">4 tags</option><option value="6" selected>6 tags</option></select>
             </label>
@@ -86,8 +88,11 @@
                 <div class="tag-names"><p><span>To</span><strong data-tag-to>Someone special</strong></p><p><span>From</span><strong data-tag-from>Our Christmas kitchen</strong></p></div>
               </div>
             </div>
+            <figure class="tag-image-preview" id="handwritten-preview" hidden aria-label="Preview of the handwritten keepsake gift tag">
+              <img src="assets/handwritten-gift-tag.jpg" alt="Vintage Christmas gift tag with holly, gold flourishes, sugar cookies, and blank To and From lines for handwriting" loading="lazy">
+            </figure>
           </div>
-          <p class="tag-preview-footnote">The printable sheet uses this design. Cut along the outer borders and attach the tags to your cookie tins or gift bags.</p>
+          <p class="tag-preview-footnote">The printable sheet uses this design. Cut along the outer borders and attach the tags to your cookie tins or gift bags. The handwritten keepsake version prints as a blank fill-in tag.</p>
         </div>
       </div>
     </section>
