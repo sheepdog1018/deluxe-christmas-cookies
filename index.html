@@ -8,7 +8,7 @@
   <title>Deluxe Vintage Christmas Cookies — A Taste of Christmas Past</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Berkshire+Swash&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/site.js" defer></script>
 </head>
@@ -27,10 +27,12 @@
   </header>
   <main id="main">
     <section class="hero" aria-label="Christmas cookie welcome">
-      <!-- PLACEHOLDER: Replace --hero-image in css/styles.css with your original hero artwork URL. -->
-      <div class="hero-shimmer" aria-hidden="true"></div>
+      <!-- Add your original image at assets/hero-christmas.jpg. The image is scaled without cropping on any screen. -->
+      <div class="hero-image-wrap" aria-hidden="true">
+        <img class="hero-artwork" src="assets/hero-christmas.jpg" alt="" onerror="this.hidden=true;this.parentElement.classList.add('hero-image-missing')">
+      </div>
       <div class="hero-content">
-        <div class="hero-title-card"><span class="hero-spark" aria-hidden="true">✧</span><h1>Deluxe Vintage<br>Christmas Cookies</h1><p>A Taste of Christmas Past</p></div>
+        <div class="hero-title-card"><span class="hero-spark" aria-hidden="true">❄ &nbsp; ✦ &nbsp; ❄</span><h1>Deluxe Vintage<br>Christmas Cookies</h1><p>A Taste of Christmas Past</p></div>
       </div>
       <a class="scroll-cue" href="#welcome" aria-label="Scroll to welcome section"><span aria-hidden="true">⌄</span><small>Come on in</small></a>
     </section>
