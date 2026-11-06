@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#344b32">
+  <meta name="description" content="Design and print nostalgic vintage Christmas gift tags for your homemade cookie tins.">
+  <title>Christmas Gift Tag Maker — Deluxe Vintage Christmas Cookies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/gift-tags.js" defer></script>
+</head>
+<body data-page="gift-tags">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="Deluxe Vintage Christmas Cookies, home"><span class="brand-mark" aria-hidden="true">✦</span><span>Deluxe Vintage<br><strong>Christmas Cookies</strong></span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes &amp; Instructions</a>
+        <a class="active" aria-current="page" href="gift-tags.html">Christmas Gift Tags</a>
+        <a class="nav-guestbook" href="https://forms.gle/14yq1mAK5xDZGLgt8" target="_blank" rel="noopener noreferrer">Leave a Sweet Note ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="tag-masthead">
+      <div class="page-width">
+        <p class="eyebrow light">From our Christmas kitchen ✦ made especially for you</p>
+        <h1>A Little Tag for Every Tin</h1>
+        <p>Turn a plate of cookies into a keepsake. Make your own old-fashioned Christmas gift tags, ready to print and share.</p>
+      </div>
+    </section>
+    <section class="tag-maker-section" aria-labelledby="tag-maker-heading">
+      <div class="page-width tag-maker-inner">
+        <div class="tag-controls-panel">
+          <p class="eyebrow">The finishing touch</p>
+          <h2 id="tag-maker-heading">Make It Personal</h2>
+          <p class="tag-panel-intro">Fill in your greeting, pick a vintage look, and watch the tag take shape.</p>
+          <form id="gift-tag-form" novalidate>
+            <div class="tag-input-grid">
+              <label class="tag-field" for="tag-to">To <input id="tag-to" name="to" type="text" maxlength="28" placeholder="Someone special" autocomplete="off"></label>
+              <label class="tag-field" for="tag-from">From <input id="tag-from" name="from" type="text" maxlength="28" placeholder="Our Christmas kitchen" autocomplete="off"></label>
+            </div>
+            <label class="tag-field" for="tag-greeting">Holiday greeting
+              <select id="tag-greeting" name="greeting">
+                <option value="Wishing you a sweet Christmas!">Wishing you a sweet Christmas!</option>
+                <option value="Baked with love, just for you.">Baked with love, just for you.</option>
+                <option value="May your days be merry &amp; bright.">May your days be merry &amp; bright.</option>
+                <option value="A little taste of Christmas magic.">A little taste of Christmas magic.</option>
+                <option value="custom">Write my own message…</option>
+              </select>
+            </label>
+            <label id="custom-greeting-wrap" class="tag-field" for="tag-custom-greeting" hidden>Your message
+              <input id="tag-custom-greeting" type="text" maxlength="64" placeholder="Your Christmas greeting">
+            </label>
+            <fieldset class="tag-styles-fieldset">
+              <legend>Choose a vintage style</legend>
+              <div class="tag-style-options">
+                <label class="tag-style-option"><input type="radio" name="tag-style" value="holly" checked><span><strong>Holly &amp; Ivory</strong><small>Classic Christmas</small></span></label>
+                <label class="tag-style-option"><input type="radio" name="tag-style" value="cranberry"><span><strong>Cranberry &amp; Gold</strong><small>Rich and festive</small></span></label>
+                <label class="tag-style-option"><input type="radio" name="tag-style" value="evergreen"><span><strong>Evergreen Keepsake</strong><small>Warm and rustic</small></span></label>
+              </div>
+            </fieldset>
+            <label class="tag-field" for="tag-count">Tags to print
+              <select id="tag-count" name="count"><option value="1">1 tag</option><option value="2">2 tags</option><option value="4">4 tags</option><option value="6" selected>6 tags</option></select>
+            </label>
+            <button type="button" class="button button-cranberry tag-print-button" id="print-gift-tags">Print My Gift Tags <span aria-hidden="true">↗</span></button>
+            <p class="tag-print-help">Designed for standard US letter paper. In your browser’s print window, choose <strong>100% scale</strong> and turn off headers/footers. You can also choose <strong>Save as PDF</strong>.</p>
+          </form>
+        </div>
+        <div class="tag-preview-panel">
+          <div class="tag-preview-header"><div><p class="eyebrow">A peek at your creation</p><h2>Your Gift Tag</h2></div><span class="tag-preview-note">Live preview</span></div>
+          <div class="tag-preview-stage">
+            <div class="tag-design" id="tag-preview" data-style="holly" aria-label="Preview of your personalized Christmas gift tag">
+              <div class="tag-interior">
+                <span class="tag-corner tag-corner-left" aria-hidden="true">❧</span><span class="tag-corner tag-corner-right" aria-hidden="true">❧</span>
+                <p class="tag-overline">✦ FROM OUR CHRISTMAS KITCHEN ✦</p>
+                <h3 class="tag-title">Christmas Wishes</h3>
+                <div class="tag-small-divider" aria-hidden="true">❦</div>
+                <p class="tag-message" data-tag-message>Wishing you a sweet Christmas!</p>
+                <div class="tag-names"><p><span>To</span><strong data-tag-to>Someone special</strong></p><p><span>From</span><strong data-tag-from>Our Christmas kitchen</strong></p></div>
+              </div>
+            </div>
+          </div>
+          <p class="tag-preview-footnote">The printable sheet uses this design. Cut along the outer borders and attach the tags to your cookie tins or gift bags.</p>
+        </div>
+      </div>
+    </section>
+    <section class="tag-afterword section-pad"><div class="page-width"><span aria-hidden="true" class="afterword-ornament">✦</span><h2>Handmade Treats Deserve a Handmade Touch</h2><p>A tag, a ribbon, and a few Christmas cookies can become someone's favorite holiday memory.</p><a class="text-link" href="recipes.html">Back to the Christmas recipes →</a></div></section>
+  </main>
+  <div class="print-sheet" id="print-sheet" aria-hidden="true"></div>
+  <footer class="site-footer"><div class="page-width footer-inner"><p>Made with love, a little nostalgia, and plenty of Christmas spirit.</p><p>© <span data-year>2026</span> SheepdogValley · <a href="#top">Back to top ↑</a></p></div></footer>
+</body>
+</html>
