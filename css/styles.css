@@ -44,3 +44,111 @@
 @media(max-width:360px){.brand strong{font-size:.68rem}.brand-mark{width:35px;height:35px}.button-row .button{width:100%}.recipe-masthead h1{font-size:1.85rem}.recipe-jump{gap:8px}.recipe-jump span{width:100%;text-align:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 @media print{@page{margin:16mm}body{background:#fff;color:#000;font:11pt/1.5 Georgia,serif}.site-header,.recipe-masthead,.recipe-jump,.site-footer,.shopping-tools,.shopping-footer button,.skip-link{display:none!important}.recipe-page-main{background:#fff;padding:0}.recipe-card,.shopping{box-shadow:none;border:1px solid #aaa;break-inside:avoid;padding:16px;margin:0 0 15px}.recipe-grid{display:block}.recipe-card h2,.shopping h2{color:#000}.shopping{margin-top:15px}.shopping-list{grid-template-columns:repeat(2,1fr)}.checklist input{appearance:auto}.checklist label{padding:3px}.checklist input:checked+span{text-decoration:none;color:#000}.steps{gap:3px}a{text-decoration:none}html{scroll-behavior:auto}}
+
+
+/* Interactive Christmas extras — deliberately compatible with existing site */
+.holiday-extras{background:linear-gradient(135deg,#f5e8d1,#fffaf0)}
+.holiday-extras h2{color:var(--cranberry);margin:12px 0 12px}
+.extras-intro{text-align:center;color:var(--muted);font-family:'Libre Baskerville',Georgia,serif;font-style:italic;font-size:.91rem;margin-bottom:34px}
+.extras-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.extras-card{display:flex;align-items:flex-start;gap:22px;padding:clamp(22px,3.4vw,38px);background:#fffdf6;border:1px solid #d8c49e;box-shadow:0 12px 28px #664b2010;transition:transform .2s,box-shadow .2s}
+.extras-card:hover{transform:translateY(-3px);box-shadow:0 18px 32px #664b201c}
+.extras-mark{flex-shrink:0;display:grid;place-items:center;width:82px;height:82px;border-radius:50%;border:3px double #b79763;background:#8c1e30;color:#fff3dd;font-size:2.6rem;font-family:Georgia,serif}
+.extras-mark-green{background:#35533d;font-size:1.2rem;letter-spacing:-.08em;font-weight:bold}
+.extras-card h3{color:var(--cranberry);font-size:1.21rem;line-height:1.4;margin:8px 0}
+.extras-card p:not(.card-number){color:var(--muted);font-size:.86rem;margin-bottom:14px}
+/* Recipe calculator */
+.batch-calculator{scroll-margin-top:95px;background:#fffcf5;border:1px solid #d2bc93;box-shadow:0 15px 35px #76604217;padding:clamp(22px,3.2vw,36px);margin:0 0 34px;position:relative;overflow:hidden}
+.batch-calculator:before{content:"";position:absolute;top:9px;bottom:9px;left:9px;right:9px;border:1px solid #bda37670;pointer-events:none}
+.batch-intro{display:flex;align-items:center;justify-content:space-between;gap:22px}
+.batch-intro h2{font-size:clamp(1.5rem,2.7vw,2.3rem);color:var(--cranberry);margin:6px 0 12px}
+.batch-intro p:last-child{font-family:'Libre Baskerville',Georgia,serif;color:var(--muted);font-size:.85rem;max-width:720px;margin:0}
+.batch-seal{flex:0 0 76px;width:76px;height:76px;border:2px solid #c5a477;border-radius:50%;display:grid;place-items:center;font-size:2rem;color:var(--cranberry);background:#f8ebd4}
+.batch-controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:25px 0 18px}
+.scale-option{display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center;min-height:81px;padding:13px 8px;background:#f7f0e1;color:#524234;border:1px solid #cbb797;border-radius:2px;transition:background .15s,border-color .15s,transform .15s}
+.scale-option:hover{background:#fff6e6;transform:translateY(-2px)}
+.scale-option strong{font-family:'Libre Baskerville',serif;font-size:1.28rem}
+.scale-option span{font-size:.75rem}
+.scale-option.is-active{background:#38593c;border-color:#38593c;color:#fff7e7;box-shadow:inset 0 0 0 2px #d9c297}
+.batch-bottom{display:flex;gap:17px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.batch-shop-toggle{display:flex;align-items:center;gap:10px;color:#334c35;font-size:.84rem;font-weight:700;cursor:pointer}
+.batch-shop-toggle input{width:18px;height:18px;accent-color:#345c3a}
+.batch-status{color:#795e3e;font-size:.75rem;margin:0}
+.batch-egg-tip{background:#f4ead6;border-left:3px solid #ae874b;padding:11px 14px;margin:18px 0 0;font-size:.79rem;color:#6f3b2e}
+.shopping-batch-note{font-size:.74rem;color:#7a654c;margin:0 0 15px;font-style:italic}
+/* Personalized printable Christmas gift tags */
+.tag-masthead{background:radial-gradient(ellipse at top,#a22c39 0%,#7e1b2a 60%,#571221 100%);color:#fff4e1;padding:clamp(55px,7vw,85px) 0;text-align:center;border-bottom:5px solid #c6a266}
+.tag-masthead h1{font-family:'Great Vibes',cursive;font-weight:400;letter-spacing:.01em;font-size:clamp(3.2rem,6vw,6rem);line-height:1.1;margin:17px 0 13px;text-shadow:0 2px 2px #460c1f70}
+.tag-masthead p:last-child{max-width:675px;margin:0 auto;font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(.85rem,1.2vw,1rem);line-height:1.8;color:#f8dfc9}
+.tag-maker-section{padding:clamp(40px,7vw,86px) 0;background:repeating-linear-gradient(45deg,#f4ead500 0 18px,#a67d3212 19px 20px),#fcf4e5}
+.tag-maker-inner{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(25px,4vw,54px);align-items:start}
+.tag-controls-panel,.tag-preview-panel{border:1px solid #d9c5a1;background:#fffdf7;box-shadow:0 15px 35px #6b52291e;padding:clamp(22px,3vw,38px)}
+.tag-controls-panel h2,.tag-preview-panel h2{font-size:clamp(1.65rem,2.5vw,2.25rem);color:var(--cranberry);margin:8px 0 11px}
+.tag-panel-intro{font-size:.85rem;color:#776855;margin-bottom:24px}
+.tag-input-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tag-field{display:flex;flex-direction:column;gap:7px;color:#40553c;font-size:.8rem;font-weight:700;letter-spacing:.012em;margin:0 0 18px}
+.tag-field input,.tag-field select{width:100%;min-height:43px;border:1px solid #ccbb9f;padding:10px 12px;border-radius:2px;background:#fffdf8;color:#3c3029;font-size:.86rem;font-family:'DM Sans',Arial,sans-serif;font-weight:400;min-width:0}
+.tag-field input:focus,.tag-field select:focus{outline:2px solid #be9452;outline-offset:1px}
+.tag-styles-fieldset{border:0;padding:0;margin:5px 0 20px;min-width:0}
+.tag-styles-fieldset legend{font-size:.8rem;color:#40553c;font-weight:700;margin-bottom:10px}
+.tag-style-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.tag-style-option{display:block;position:relative;cursor:pointer}
+.tag-style-option input{position:absolute;opacity:0;width:1px;height:1px}
+.tag-style-option span{display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;min-height:82px;gap:3px;padding:9px 5px;border:1px solid #c9b493;background:#f9f0df;color:#6b2b2e;transition:border-color .15s,background .15s}
+.tag-style-option span strong{font-size:.72rem;line-height:1.3}
+.tag-style-option span small{font-size:.61rem;color:#847056}
+.tag-style-option:nth-child(2) span{background:#8b2031;color:#fff2d5}.tag-style-option:nth-child(2) span small{color:#edd5aa}
+.tag-style-option:nth-child(3) span{background:#365942;color:#fff1db}.tag-style-option:nth-child(3) span small{color:#e4d2a8}
+.tag-style-option input:checked+span{outline:3px solid #a98046;outline-offset:-3px;border-color:#7d532e;box-shadow:0 3px 8px #422a2420}
+.tag-style-option input:focus-visible+span{outline:3px solid #e8ad46;outline-offset:3px}
+.tag-print-button{width:100%;font-size:.9rem;margin:3px 0 12px}
+.tag-print-help{font-size:.72rem;color:#7e705e;line-height:1.65;margin:0}
+.tag-preview-panel{background:#f8eedc}
+.tag-preview-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:19px}
+.tag-preview-header h2{margin-bottom:0}
+.tag-preview-note{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:#8b7050;white-space:nowrap}
+.tag-preview-stage{padding:clamp(12px,2.2vw,24px);background:linear-gradient(145deg,#d8c2a0,#eadac1);border:1px solid #c1a77f}
+.tag-design{--tag-bg:#fff6e5;--tag-ink:#862034;--tag-sub:#36533a;--tag-border:#b38c4e;--tag-accent:#b38c4e;position:relative;width:100%;aspect-ratio:3.5/2.25;min-height:0;overflow:hidden;display:block;background:radial-gradient(ellipse at 35% 20%,#fffcf4,var(--tag-bg) 75%);color:var(--tag-ink);border:4px solid var(--tag-border);box-shadow:0 7px 17px #4d361f24}
+.tag-design:before{content:"";position:absolute;inset:7px;border:1px solid var(--tag-border);pointer-events:none}
+.tag-design[data-style="cranberry"]{--tag-bg:#872034;--tag-ink:#fff2d9;--tag-sub:#f4dfb0;--tag-border:#b79a60;--tag-accent:#f0d099;background:radial-gradient(circle at 50% 30%,#a23248,#651527)}
+.tag-design[data-style="evergreen"]{--tag-bg:#e9eddc;--tag-ink:#2e503a;--tag-sub:#6f3d32;--tag-border:#9b864a;--tag-accent:#b88c4b;background:linear-gradient(155deg,#f7f0d8,#dce6d4)}
+.tag-interior{position:relative;height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:space-around;text-align:center;padding:5% 8% 5.5%;overflow:hidden}
+.tag-corner{position:absolute;color:var(--tag-accent);top:4%;font-size:clamp(.7rem,1.5vw,1.1rem);line-height:1}
+.tag-corner-left{left:5%;transform:rotate(-35deg)}.tag-corner-right{right:5%;transform:rotate(35deg)}
+.tag-overline{font-family:'DM Sans',Arial,sans-serif;letter-spacing:.09em;font-size:clamp(.41rem,.7vw,.6rem);font-weight:700;color:var(--tag-sub);margin:0}
+.tag-title{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(1.6rem,3vw,3.25rem);line-height:1.05;color:var(--tag-ink);margin:1% 0 0}
+.tag-small-divider{color:var(--tag-accent);font-size:clamp(.8rem,1.5vw,1.3rem);line-height:1}
+.tag-message{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;color:var(--tag-sub);font-size:clamp(.52rem,.92vw,.83rem);line-height:1.45;margin:0;overflow-wrap:anywhere;max-width:100%}
+.tag-names{width:100%;display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--tag-border);padding-top:2.7%;text-align:left}
+.tag-names p{display:flex;gap:4px;align-items:baseline;margin:0;max-width:50%;min-width:0;font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(.48rem,.82vw,.7rem);line-height:1.25;color:var(--tag-ink)}
+.tag-names p:last-child{text-align:right;justify-content:flex-end}
+.tag-names p span{font-style:italic;opacity:.85}.tag-names p strong{font-weight:700;overflow-wrap:anywhere}
+.tag-preview-footnote{font-size:.76rem;color:#7c6e5c;margin:15px 0 0;line-height:1.6}
+.tag-afterword{text-align:center;background:linear-gradient(125deg,#f0dfc0,#fff9ee)}
+.tag-afterword .afterword-ornament{font-size:1.65rem;color:#a77e45}
+.tag-afterword h2{color:var(--cranberry);margin:10px 0 12px}
+.tag-afterword p{max-width:650px;margin:0 auto 17px;font-family:'Libre Baskerville',Georgia,serif;font-style:italic;color:#766454;font-size:.91rem}
+.print-sheet{display:none}
+@media(max-width:900px){.tag-maker-inner{grid-template-columns:1fr}.tag-controls-panel,.tag-preview-panel{max-width:720px;width:100%;margin:0 auto}.tag-design{max-width:560px;margin:auto}.tag-overline{font-size:clamp(.42rem,1.4vw,.66rem)}.tag-title{font-size:clamp(1.8rem,6.5vw,3.5rem)}.tag-message{font-size:clamp(.58rem,1.7vw,.93rem)}.tag-names p{font-size:clamp(.51rem,1.5vw,.76rem)}}
+@media(max-width:680px){.extras-grid{grid-template-columns:1fr}.extras-card{padding:23px;gap:18px}.extras-mark{width:60px;height:60px;font-size:1.9rem}.extras-mark-green{font-size:.93rem}.batch-calculator{scroll-margin-top:72px;margin-bottom:22px}.batch-seal{display:none}.batch-controls{gap:7px}.scale-option{min-height:73px;padding:9px 4px}.scale-option strong{font-size:1.04rem}.scale-option span{font-size:.62rem}.batch-status{width:100%}.tag-masthead{padding:48px 0}.tag-masthead h1{font-size:clamp(3.1rem,12vw,4.6rem)}.tag-style-option span strong{font-size:.65rem}.tag-style-option span small{font-size:.54rem}.tag-preview-stage{padding:12px}.tag-design .tag-title{font-size:clamp(1.7rem,7vw,3.25rem)}.tag-design .tag-overline{font-size:clamp(.37rem,1.65vw,.6rem)}.tag-design .tag-message{font-size:clamp(.48rem,2.1vw,.83rem)}.tag-design .tag-names p{font-size:clamp(.45rem,1.8vw,.67rem)}}
+@media(max-width:380px){.tag-input-grid{grid-template-columns:1fr;gap:0}.tag-style-options{grid-template-columns:1fr}.tag-style-option span{min-height:52px}.tag-preview-note{display:none}}
+@media print{
+  /* Calculator prints the selected amounts and shopping suggestions. */
+  body[data-page="recipes"] .batch-calculator{display:none!important}
+  body[data-page="recipes"] .shopping-batch-note{font-size:8pt;color:#333}
+  @page{size:letter;margin:.4in}
+  body[data-page="gift-tags"]{background:#fff!important;margin:0!important}
+  body[data-page="gift-tags"] > :not(.print-sheet){display:none!important}
+  body[data-page="gift-tags"] .print-sheet{display:grid!important;grid-template-columns:repeat(2,3.5in);gap:.18in .25in;align-items:start;justify-content:center;max-width:7.35in;margin:0 auto!important;page-break-inside:auto}
+  body[data-page="gift-tags"] .tag-print{height:2.25in!important;width:3.5in!important;max-width:3.5in!important;min-height:2.25in!important;aspect-ratio:auto!important;break-inside:avoid!important;page-break-inside:avoid!important;box-shadow:none!important;border-width:3px!important;print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important}
+  body[data-page="gift-tags"] .tag-print .tag-interior{padding:5% 7% 5.5%!important}
+  body[data-page="gift-tags"] .tag-print .tag-title{font-size:28pt!important}
+  body[data-page="gift-tags"] .tag-print .tag-overline{font-size:6.3pt!important}
+  body[data-page="gift-tags"] .tag-print .tag-message{font-size:8.2pt!important}
+  body[data-page="gift-tags"] .tag-print .tag-names p{font-size:6.3pt!important}
+  body[data-page="gift-tags"] .tag-print .tag-small-divider{font-size:13pt!important}
+  body[data-page="gift-tags"] .tag-print .tag-corner{font-size:11pt!important}
+}
+
+/* HTML hidden must override the display:flex used for form fields. */
+.tag-field[hidden]{display:none!important}
