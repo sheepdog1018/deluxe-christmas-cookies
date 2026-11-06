@@ -8,7 +8,7 @@
   <title>Deluxe Vintage Christmas Cookies — A Taste of Christmas Past</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/site.js" defer></script>
 </head>
@@ -26,15 +26,20 @@
     </div>
   </header>
   <main id="main">
-    <section class="hero" aria-label="Christmas cookie welcome">
-      <!-- Add your original image at assets/hero-christmas.jpg. The image is scaled without cropping on any screen. -->
-      <div class="hero-image-wrap" aria-hidden="true">
-        <img class="hero-artwork" src="assets/hero-christmas.jpg" alt="" onerror="this.hidden=true;this.parentElement.classList.add('hero-image-missing')">
+    <section class="hero" aria-labelledby="hero-heading">
+      <!-- Upload your original artwork to assets/hero-christmas.jpg. It fills the desktop hero; on mobile, the full image is shown. -->
+      <div class="hero-visual">
+        <img class="hero-artwork" src="assets/hero-christmas.jpg" alt="Vintage Christmas illustration of decorated cookies and a holiday cookie tin beside a glowing Christmas tree" onerror="this.classList.add('is-missing')">
       </div>
       <div class="hero-content">
-        <div class="hero-title-card"><span class="hero-spark" aria-hidden="true">❄ &nbsp; ✦ &nbsp; ❄</span><h1>Deluxe Vintage<br>Christmas Cookies</h1><p>A Taste of Christmas Past</p></div>
+        <div class="hero-lettering">
+          <span class="hero-kicker">✦ &nbsp; FROM OUR CHRISTMAS KITCHEN &nbsp; ✦</span>
+          <h1 id="hero-heading"><span>Deluxe Vintage</span><span>Christmas Cookies</span></h1>
+          <div class="hero-divider" aria-hidden="true"><span>❧</span></div>
+          <p>A Taste of Christmas Past</p>
+        </div>
       </div>
-      <a class="scroll-cue" href="#welcome" aria-label="Scroll to welcome section"><span aria-hidden="true">⌄</span><small>Come on in</small></a>
+      <a class="scroll-cue" href="#welcome" aria-label="Explore the Christmas cookies website"><span aria-hidden="true">⌄</span><small>Come on in</small></a>
     </section>
     <section class="welcome" id="welcome" aria-labelledby="welcome-heading">
       <div class="welcome-inner page-width">
