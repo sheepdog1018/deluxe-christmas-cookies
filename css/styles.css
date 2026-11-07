@@ -163,3 +163,72 @@
 
 /* HTML hidden must override the display:flex used for form fields. */
 .tag-field[hidden]{display:none!important}
+
+
+/* ==============================================================
+   Gift tag selection clarity — November 2026
+   Display ONLY the chosen preview, distinguish selection clearly.
+   The source preview uses the HTML `hidden` attribute, which must
+   override the older .tag-design{display:block} and
+   .tag-image-preview{display:flex} styling.
+   ============================================================== */
+body[data-page="gift-tags"] .tag-preview-stage > [hidden] {
+  display: none !important;
+}
+
+/* Explain that the large panel displays one selected design. */
+body[data-page="gift-tags"] .tag-preview-stage::before {
+  content: "✓ SELECTED DESIGN · PERSONALIZED TAG";
+  display: block;
+  margin: 0 0 18px;
+  text-align: center;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 800;
+  font-size: .73rem;
+  letter-spacing: .11em;
+  line-height: 1.5;
+  color: #76202b;
+}
+body[data-page="gift-tags"][data-print-mode="handwritten"] .tag-preview-stage::before {
+  content: "✓ SELECTED DESIGN · HANDWRITTEN KEEPSAKE";
+}
+
+/* Make the selected preview unmistakable without changing prints. */
+body[data-page="gift-tags"] .tag-preview-stage > .tag-design:not([hidden]),
+body[data-page="gift-tags"] .tag-preview-stage > .tag-image-preview:not([hidden]) {
+  outline: 4px solid #922638;
+  outline-offset: 3px;
+  box-shadow: 0 7px 22px rgba(63, 32, 22, .2);
+}
+
+/* Emphasize the matching style selector too. */
+body[data-page="gift-tags"] .tag-style-option input:checked + span {
+  outline: 3px solid #922638;
+  outline-offset: 2px;
+  box-shadow: 0 5px 14px rgba(84, 34, 28, .22);
+}
+body[data-page="gift-tags"] .tag-style-option input:checked + span::after {
+  content: "✓ SELECTED";
+  display: block;
+  margin-top: 5px;
+  font-size: .56rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
+
+@media (max-width: 680px) {
+  body[data-page="gift-tags"] .tag-preview-stage::before {
+    font-size: .61rem;
+    letter-spacing: .06em;
+    margin-bottom: 13px;
+  }
+  body[data-page="gift-tags"] .tag-preview-stage > .tag-design:not([hidden]),
+  body[data-page="gift-tags"] .tag-preview-stage > .tag-image-preview:not([hidden]) {
+    outline-width: 3px;
+    outline-offset: 1px;
+  }
+}
+
+@media print {
+  body[data-page="gift-tags"] .tag-preview-stage::before { display: none !important; }
+}
