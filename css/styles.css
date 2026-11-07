@@ -165,70 +165,25 @@
 .tag-field[hidden]{display:none!important}
 
 
-/* ==============================================================
-   Gift tag selection clarity — November 2026
-   Display ONLY the chosen preview, distinguish selection clearly.
-   The source preview uses the HTML `hidden` attribute, which must
-   override the older .tag-design{display:block} and
-   .tag-image-preview{display:flex} styling.
-   ============================================================== */
-body[data-page="gift-tags"] .tag-preview-stage > [hidden] {
-  display: none !important;
-}
+/* Handwritten keepsake collection */
+.tag-design[hidden],.tag-image-preview[hidden],.handwrite-collection[hidden]{display:none !important}
+.tag-preview-current{margin:0 0 12px;padding:10px 14px;border:1px solid #d7bf98;background:#f8f1e4;color:#7a5132;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.tag-preview-stage.is-handwritten-mode{border-color:#a61d33;box-shadow:0 0 0 4px rgba(166,29,51,.08) inset}
+.handwrite-collection{margin:-4px 0 18px;padding:16px;border:1px solid #d9c6a4;background:#fbf5ea}
+.handwrite-collection-header{margin-bottom:12px}.handwrite-collection-title{margin:0 0 5px;font-size:.95rem;font-weight:700;color:#6e3e22}.handwrite-collection-copy{margin:0;font-size:.77rem;line-height:1.6;color:#7a6a57}
+.handwrite-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.handwrite-thumb{appearance:none;-webkit-appearance:none;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:8px;border:2px solid #ccb289;background:#fff9ef;cursor:pointer;text-align:left;transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease}
+.handwrite-thumb:hover{border-color:#9b6c3d;transform:translateY(-1px)}
+.handwrite-thumb.is-active{border-color:#a61d33;box-shadow:0 0 0 3px rgba(166,29,51,.14)}
+.handwrite-thumb img{display:block;width:100%;aspect-ratio:1 / 1.2;object-fit:cover;background:#f0e4ce}
+.handwrite-thumb span{display:block;font-size:.71rem;line-height:1.35;font-weight:700;color:#5f4a37}
+.handwrite-thumb.is-active span{color:#7e1628}
+.handwrite-thumb.is-active::after{content:'✓ Selected';align-self:flex-start;padding:4px 8px;border-radius:999px;background:#a61d33;color:#fff;font-size:.63rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.tag-image-preview{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.tag-image-preview img{display:block;width:min(100%,360px);height:auto;max-height:460px;object-fit:contain}
+.tag-image-caption{margin:0;color:#7a5132;font-size:.86rem;font-weight:700;letter-spacing:.03em;text-align:center}
+@media(max-width:900px){.handwrite-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.tag-image-preview img{max-height:420px}}
+@media(max-width:680px){.handwrite-collection{padding:13px}.handwrite-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.handwrite-thumb{padding:7px}.handwrite-thumb span{font-size:.66rem}.tag-preview-current{font-size:.68rem;padding:9px 12px}.tag-image-caption{font-size:.8rem}}
+@media(max-width:420px){.handwrite-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.tag-image-preview img{width:min(100%,300px)}}
 
-/* Explain that the large panel displays one selected design. */
-body[data-page="gift-tags"] .tag-preview-stage::before {
-  content: "✓ SELECTED DESIGN · PERSONALIZED TAG";
-  display: block;
-  margin: 0 0 18px;
-  text-align: center;
-  font-family: 'DM Sans', Arial, sans-serif;
-  font-weight: 800;
-  font-size: .73rem;
-  letter-spacing: .11em;
-  line-height: 1.5;
-  color: #76202b;
-}
-body[data-page="gift-tags"][data-print-mode="handwritten"] .tag-preview-stage::before {
-  content: "✓ SELECTED DESIGN · HANDWRITTEN KEEPSAKE";
-}
-
-/* Make the selected preview unmistakable without changing prints. */
-body[data-page="gift-tags"] .tag-preview-stage > .tag-design:not([hidden]),
-body[data-page="gift-tags"] .tag-preview-stage > .tag-image-preview:not([hidden]) {
-  outline: 4px solid #922638;
-  outline-offset: 3px;
-  box-shadow: 0 7px 22px rgba(63, 32, 22, .2);
-}
-
-/* Emphasize the matching style selector too. */
-body[data-page="gift-tags"] .tag-style-option input:checked + span {
-  outline: 3px solid #922638;
-  outline-offset: 2px;
-  box-shadow: 0 5px 14px rgba(84, 34, 28, .22);
-}
-body[data-page="gift-tags"] .tag-style-option input:checked + span::after {
-  content: "✓ SELECTED";
-  display: block;
-  margin-top: 5px;
-  font-size: .56rem;
-  font-weight: 800;
-  letter-spacing: .09em;
-}
-
-@media (max-width: 680px) {
-  body[data-page="gift-tags"] .tag-preview-stage::before {
-    font-size: .61rem;
-    letter-spacing: .06em;
-    margin-bottom: 13px;
-  }
-  body[data-page="gift-tags"] .tag-preview-stage > .tag-design:not([hidden]),
-  body[data-page="gift-tags"] .tag-preview-stage > .tag-image-preview:not([hidden]) {
-    outline-width: 3px;
-    outline-offset: 1px;
-  }
-}
-
-@media print {
-  body[data-page="gift-tags"] .tag-preview-stage::before { display: none !important; }
-}
+@media print{body[data-page="gift-tags"] .tag-print-image figcaption{display:none !important}}
