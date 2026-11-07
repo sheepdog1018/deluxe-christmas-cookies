@@ -68,6 +68,25 @@
               </div>
             </fieldset>
             <p id="handwrite-note" class="handwrite-note" hidden>This version prints your illustrated tag as-is so you can fill in the <strong>To</strong> and <strong>From</strong> lines by hand for a more personal touch.</p>
+            <div id="handwrite-collection" class="handwrite-collection" hidden>
+              <div class="handwrite-collection-header">
+                <p class="handwrite-collection-title">Handwritten Keepsake Collection</p>
+                <p class="handwrite-collection-copy">Choose one of your printable hand-fill tags. We'll preview the exact tag you selected and print copies of that design.</p>
+              </div>
+              <div class="handwrite-gallery" role="list" aria-label="Handwritten tag designs">
+                <button type="button" class="handwrite-thumb is-active" data-handwritten-image="assets/handwritten-tag-01-cookie-tin-flourish.jpg" data-handwritten-name="Cookie Tin Flourish" data-handwritten-alt="Vintage Christmas gift tag with holly, gold flourishes, sugar cookies, and blank To and From lines for handwriting" aria-pressed="true"><img src="assets/handwritten-tag-01-cookie-tin-flourish.jpg" alt="" loading="lazy"><span>Cookie Tin Flourish</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-02-moonlit-sleigh-ride.jpg" data-handwritten-name="Moonlit Sleigh Ride" data-handwritten-alt="Vintage Christmas gift tag with teal flourishes, church, sleigh, deer, stars, and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-02-moonlit-sleigh-ride.jpg" alt="" loading="lazy"><span>Moonlit Sleigh Ride</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-03-santa-over-cottage.jpg" data-handwritten-name="Santa Over Cottage" data-handwritten-alt="Vintage red Christmas gift tag with cottage, deer, Santa flying overhead, and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-03-santa-over-cottage.jpg" alt="" loading="lazy"><span>Santa Over Cottage</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-04-cookie-flourish-classic.jpg" data-handwritten-name="Cookie Flourish Classic" data-handwritten-alt="Vintage Christmas cookie themed gift tag with decorative flourishes and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-04-cookie-flourish-classic.jpg" alt="" loading="lazy"><span>Cookie Flourish Classic</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-05-cozy-kitchen-keepsake.jpg" data-handwritten-name="Cozy Kitchen Keepsake" data-handwritten-alt="Vintage Christmas gift tag with cookie plate, festive tin, and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-05-cozy-kitchen-keepsake.jpg" alt="" loading="lazy"><span>Cozy Kitchen Keepsake</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-06-snowy-cabin-keepsake.jpg" data-handwritten-name="Snowy Cabin Keepsake" data-handwritten-alt="Vintage printable gift tag with snowy cabin, pinecones, and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-06-snowy-cabin-keepsake.jpg" alt="" loading="lazy"><span>Snowy Cabin Keepsake</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-07-white-village-greeting.jpg" data-handwritten-name="White Village Greeting" data-handwritten-alt="Vintage Merry Christmas gift tag with snowy village and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-07-white-village-greeting.jpg" alt="" loading="lazy"><span>White Village Greeting</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-08-white-christmas-village.jpg" data-handwritten-name="White Christmas Village" data-handwritten-alt="A Very Merry White Christmas gift tag with snowy village scene and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-08-white-christmas-village.jpg" alt="" loading="lazy"><span>White Christmas Village</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-09-carolers-christmas-scene.jpg" data-handwritten-name="Carolers Christmas Scene" data-handwritten-alt="A Very Merry Christmas gift tag with village square, carolers, snowman, and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-09-carolers-christmas-scene.jpg" alt="" loading="lazy"><span>Carolers Christmas Scene</span></button>
+                <button type="button" class="handwrite-thumb" data-handwritten-image="assets/handwritten-tag-10-little-deer-holiday.jpg" data-handwritten-name="Little Deer Holiday" data-handwritten-alt="Merry Christmas gift tag with a little deer in a snowy scene and blank To and From lines" aria-pressed="false"><img src="assets/handwritten-tag-10-little-deer-holiday.jpg" alt="" loading="lazy"><span>Little Deer Holiday</span></button>
+              </div>
+            </div>
+
             <label class="tag-field" for="tag-count">Tags to print
               <select id="tag-count" name="count"><option value="1">1 tag</option><option value="2">2 tags</option><option value="4">4 tags</option><option value="6" selected>6 tags</option></select>
             </label>
@@ -77,6 +96,7 @@
         </div>
         <div class="tag-preview-panel">
           <div class="tag-preview-header"><div><p class="eyebrow">A peek at your creation</p><h2>Your Gift Tag</h2></div><span class="tag-preview-note">Live preview</span></div>
+          <p class="tag-preview-current" id="tag-preview-current">Selected design: Holly &amp; Ivory</p>
           <div class="tag-preview-stage">
             <div class="tag-design" id="tag-preview" data-style="holly" aria-label="Preview of your personalized Christmas gift tag">
               <div class="tag-interior">
@@ -89,7 +109,8 @@
               </div>
             </div>
             <figure class="tag-image-preview" id="handwritten-preview" hidden aria-label="Preview of the handwritten keepsake gift tag">
-              <img src="assets/handwritten-gift-tag.jpg" alt="Vintage Christmas gift tag with holly, gold flourishes, sugar cookies, and blank To and From lines for handwriting" loading="lazy">
+              <img src="assets/handwritten-tag-01-cookie-tin-flourish.jpg" alt="Vintage Christmas gift tag with holly, gold flourishes, sugar cookies, and blank To and From lines for handwriting" loading="lazy">
+              <figcaption class="tag-image-caption" id="handwritten-caption">Cookie Tin Flourish</figcaption>
             </figure>
           </div>
           <p class="tag-preview-footnote">The printable sheet uses this design. Cut along the outer borders and attach the tags to your cookie tins or gift bags. The handwritten keepsake version prints as a blank fill-in tag.</p>
